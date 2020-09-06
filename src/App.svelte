@@ -20,6 +20,7 @@
 </script>
 
 <div class="container mt-5">
+  <h1>Demo - Reactive Statement</h1>
   <div class="mb-3">
     <span>x</span>
     <input type="number" value={x} on:input={handleXInput} />
@@ -30,7 +31,7 @@
     <input type="number" value={y} on:input={handleYInput} />
   </div>
 
-  <p>z = {z}</p>
+  <p>SUM(x,y) = {z}</p>
 </div>
 
 
