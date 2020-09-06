@@ -1,24 +1,9 @@
 <script>
-  import xStore from './xStore';
-  import yStore from './yStore';
+  import x from './xStore';
+  import y from './yStore';
   import Header from './Header.svelte';
 
-	let x;
-  let y;
-  $: z = x + y;
-
-  xStore.subscribe( value => { x = value });
-  yStore.subscribe( value => { y = value });
-
-	function handleXChange(event) {
-    let value = parseInt(event.target.value,10);
-    xStore.set( value );
-  }
-
-  function handleYChange(event) {
-    let value = parseInt(event.target.value,10);
-    yStore.set( value );
-  }
+  $: z = $x + $y;
   
 </script>
 
@@ -26,12 +11,12 @@
   <Header />
   <div class="mb-3">
     <span>x</span>
-    <input type="number" value={x} on:input={handleXChange} />
+    <input type="number" bind:value={$x}  />
   </div>
 
   <div class="mb-3">
     <span>y</span>
-    <input type="number" value={y} on:input={handleYChange} />
+    <input type="number" bind:value={$y}  />
   </div>
 
   <p>z = {z}</p>

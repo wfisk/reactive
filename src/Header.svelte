@@ -1,11 +1,8 @@
 <script>
-  import xStore from './xStore';
-
-  let x;
-  xStore.subscribe( value => { x = value;  });
+  import x from './xStore';
 </script>
 
 <header class="bg-primary text-white mb-5 p-3">
-  The value of X is {x}
+  The value of $X is {$x}
 </header>
 
