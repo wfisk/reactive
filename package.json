@@ -7,15 +7,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "^4.5.2",
     "firebase": "^7.19.1",
     "fxjs": "^0.16.3",
     "rxfire": "^3.13.5",
-    "sass": "^1.26.10",
+    "rxjs": "^6.6.3",
     "svelte": "3.24.1",
     "svelte-hmr": "0.10.2",
-    "svelte-preprocess": "^4.2.1",
-    "sveltestrap": "^3.7.3",
     "svite": "^0.6.0"
   }
 }
