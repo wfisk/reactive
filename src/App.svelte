@@ -4,6 +4,16 @@
   import Header from './Header.svelte';
 
   $: z = $x + $y;
+
+  function handleXInput(event){
+    let value = parseInt( event.target.value );
+    $x = value;
+  }
+  
+  function handleYInput(event){
+    let value = parseInt( event.target.value );
+    $y = value;
+  }
   
 </script>
 
@@ -11,17 +21,14 @@
   <Header />
   <div class="mb-3">
     <span>x</span>
-    <input type="number" bind:value={$x}  />
+    <input type="number" value={$x} on:input={handleXInput} />
   </div>
 
   <div class="mb-3">
     <span>y</span>
-    <input type="number" bind:value={$y}  />
+    <input type="number" value={$y}  on:input={handleYInput}/>
   </div>
 
   <p>z = {z}</p>
 </div>
 
-<style global type="text/scss">
-	@import './styles/global.scss';
-</style>
