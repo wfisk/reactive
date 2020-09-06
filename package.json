@@ -1,0 +1,18 @@
+{
+  "name": "reactive",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "svite --port 5000",
+    "build": "svite build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.5.2",
+    "sass": "^1.26.10",
+    "svelte": "3.24.1",
+    "svelte-hmr": "0.10.2",
+    "svelte-preprocess": "^4.2.1",
+    "sveltestrap": "^3.7.3",
+    "svite": "^0.6.0"
+  }
+}
