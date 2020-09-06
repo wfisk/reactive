@@ -1,25 +1,29 @@
 <script>
-	let x = 5;
-  let y = 7;
-  let z;
-	updateZ();
+  import xStore from './xStore';
+  import yStore from './yStore';
+  import Header from './Header.svelte';
+
+	let x;
+  let y;
+  $: z = x + y;
+
+  xStore.subscribe( value => { x = value });
+  yStore.subscribe( value => { y = value });
 
 	function handleXChange(event) {
-    x = parseInt(event.target.value,10);
-    updateZ();
+    let value = parseInt(event.target.value,10);
+    xStore.set( value );
   }
 
   function handleYChange(event) {
-		y = parseInt(event.target.value,10);
-    updateZ();
+    let value = parseInt(event.target.value,10);
+    yStore.set( value );
   }
   
-  function updateZ(){
-    z = x + y;
-  }
 </script>
 
 <div class="container mt-5">
+  <Header />
   <div class="mb-3">
     <span>x</span>
     <input type="number" value={x} on:input={handleXChange} />
