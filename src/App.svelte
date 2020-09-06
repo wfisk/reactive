@@ -10,12 +10,12 @@
   xStore.subscribe( value => { x = value });
   yStore.subscribe( value => { y = value });
 
-	function handleXChange(event) {
+	function handleXInput(event) {
     let value = parseInt(event.target.value,10);
     xStore.set( value );
   }
 
-  function handleYChange(event) {
+  function handleYInput(event) {
     let value = parseInt(event.target.value,10);
     yStore.set( value );
   }
@@ -26,12 +26,12 @@
   <Header />
   <div class="mb-3">
     <span>x</span>
-    <input type="number" value={x} on:input={handleXChange} />
+    <input type="number" value={x} on:input={handleXInput} />
   </div>
 
   <div class="mb-3">
     <span>y</span>
-    <input type="number" value={y} on:input={handleYChange} />
+    <input type="number" value={y} on:input={handleYInput} />
   </div>
 
   <p>z = {z}</p>
