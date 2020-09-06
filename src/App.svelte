@@ -1,22 +1,16 @@
 <script>
-	let x = 5;
+	let x = 15;
   let y = 7;
-  let z;
-	updateZ();
+  $: z = x + y;
 
 	function handleXInput(event) {
     x = parseInt(event.target.value,10);
-    updateZ();
   }
 
   function handleYInput(event) {
 		y = parseInt(event.target.value,10);
-    updateZ();
   }
   
-  function updateZ(){
-    z = x + y;
-  }
 </script>
 
 <div class="container mt-5">
