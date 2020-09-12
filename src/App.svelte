@@ -12,14 +12,12 @@
   }
 </script>
 
-<div class="mb-3">
-  <span>x</span>
-  <input type="number" value={x} on:input={handleXInput} />
-</div>
+<h1>Reactive Statement (#1)</h1>
 
-<div class="mb-3">
-  <span>y</span>
-  <input type="number" value={y} on:input={handleYInput} />
-</div>
+<span>x</span>
+<input type="number" value={x} on:input={handleXInput} />
+
+<span>y</span>
+<input type="number" value={y} on:input={handleYInput} />
 
 <p>z = {z}</p>
