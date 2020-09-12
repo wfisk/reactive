@@ -20,14 +20,10 @@
 </script>
 
 <h1>Reactive Statement (#1)</h1>
-<div class="mb-3">
-  <span>x</span>
-  <input type="number" value={x} on:input={handleXInput} />
-</div>
+<span>x</span>
+<input type="number" value={x} on:input={handleXInput} />
 
-<div class="mb-3">
-  <span>y</span>
-  <input type="number" value={y} on:input={handleYInput} />
-</div>
+<span>y</span>
+<input type="number" value={y} on:input={handleYInput} />
 
-<p>SUM(x,y) = {z}</p>
+<p>z = {z}</p>
