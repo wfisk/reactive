@@ -15,11 +15,6 @@ class Store {
     return () => {};
   }
 
-  update(callback) {
-    this.value = callback(this.value);
-    this._notifyListeners();
-  }
-
   // private
   _notifyListeners() {
     this.listeners.forEach((listener) => {
