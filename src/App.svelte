@@ -1,37 +1,33 @@
 <script>
-	let x = 5;
+  let x = 5;
   let y = 7;
   let z;
-	updateZ();
+  updateZ();
 
-	function handleXInput(event) {
-    x = parseInt(event.target.value,10);
+  function handleXInput(event) {
+    x = parseInt(event.target.value, 10);
     updateZ();
   }
 
   function handleYInput(event) {
-		y = parseInt(event.target.value,10);
+    y = parseInt(event.target.value, 10);
     updateZ();
   }
-  
-  function updateZ(){
+
+  function updateZ() {
     z = x + y;
   }
 </script>
 
-<div class="container mt-5">
-  <h1>Demo - Reactive Statement</h1>
-  <div class="mb-3">
-    <span>x</span>
-    <input type="number" value={x} on:input={handleXInput} />
-  </div>
-
-  <div class="mb-3">
-    <span>y</span>
-    <input type="number" value={y} on:input={handleYInput} />
-  </div>
-
-  <p>SUM(x,y) = {z}</p>
+<h1>Reactive Statement (#1)</h1>
+<div class="mb-3">
+  <span>x</span>
+  <input type="number" value={x} on:input={handleXInput} />
 </div>
 
+<div class="mb-3">
+  <span>y</span>
+  <input type="number" value={y} on:input={handleYInput} />
+</div>
 
+<p>SUM(x,y) = {z}</p>
