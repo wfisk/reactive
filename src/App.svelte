@@ -17,20 +17,19 @@
 
 </script>
 
-<div class="container mt-5">
 
   {#if $gameState }
-    <div class="mb-3">
+
       <span>x</span>
       <input type="number" value={$gameState.x}  on:input={handleXInput}/>
-    </div>
 
-    <div class="mb-3">
+
+
       <span>y</span>
       <input type="number" value={$gameState.y}  on:input={handleYInput}/>
-    </div>
+
 
     <p>z = {z}</p>
    {/if} 
-</div>
+
 
